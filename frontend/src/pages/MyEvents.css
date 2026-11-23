@@ -1,0 +1,377 @@
+
+.my-events-page {
+  min-height: 100vh;
+  background: #f6f5f0;
+  color: #12372c;
+  font-family: "DM Sans", sans-serif;
+}
+
+.my-events-header {
+  background: #fffefa;
+  padding: 27px 38px;
+  border-bottom: 1px solid #e9e5da;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.my-events-eyebrow {
+  color: #a9823f;
+  font-size: 10px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.my-events-header h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 27px;
+  font-weight: 400;
+  margin: 5px 0;
+}
+
+.my-events-header p {
+  color: #898b83;
+  font-size: 13px;
+  margin: 0;
+}
+
+.my-events-header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.my-events-header-actions button,
+.me-create-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 17px;
+  cursor: pointer;
+  font-size: 12px;
+  border-radius: 3px;
+  transition: 0.2s;
+}
+
+.me-refresh-btn {
+  background: white;
+  border: 1px solid #dedbcf;
+  color: #244b3c;
+}
+
+.me-refresh-btn:hover {
+  background: #f1f0e9;
+}
+
+.me-create-btn {
+  background: #12372c;
+  border: 1px solid #12372c;
+  color: #fff;
+}
+
+.me-create-btn:hover {
+  background: #205440;
+}
+
+.my-events-content {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 35px 30px 60px;
+}
+
+.me-summary {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 28px;
+}
+
+.me-summary div {
+  background: #fffefa;
+  border: 1px solid #e9e5da;
+  padding: 21px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.me-summary span {
+  font-size: 12px;
+  color: #85877f;
+}
+
+.me-summary strong {
+  font-family: "Outfit", sans-serif;
+  font-size: 29px;
+  font-weight: 400;
+}
+
+.me-toolbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.me-search {
+  flex: 1;
+  max-width: 650px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fffefa;
+  border: 1px solid #e6e2d8;
+  padding: 0 15px;
+  color: #8d927f;
+}
+
+.me-search input {
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 13px;
+  color: #183b30;
+}
+
+.me-toolbar select {
+  min-width: 165px;
+  padding: 12px;
+  border: 1px solid #e6e2d8;
+  background: #fffefa;
+  color: #244b3c;
+  outline: none;
+}
+
+.me-event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.me-event-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fffefa;
+  border: 1px solid #e9e5da;
+  padding: 18px 20px;
+  transition: border-color 0.2s;
+}
+
+.me-event-card:hover {
+  border-color: #b99a60;
+}
+
+.me-event-poster {
+  width: 76px;
+  height: 76px;
+  flex-shrink: 0;
+  background: #e9eee7;
+  color: #315c48;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.me-event-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.me-event-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.me-category {
+  color: #ad8748;
+  font-size: 9px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.me-event-info h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 6px 0 9px;
+  color: #12372c;
+}
+
+.me-event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  color: #81877e;
+  font-size: 11px;
+}
+
+.me-event-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.me-event-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.me-event-actions button {
+  width: 36px;
+  height: 36px;
+  background: transparent;
+  border: 1px solid #e7e2d7;
+  color: #315c48;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+
+.me-event-actions button:hover {
+  background: #edf1e9;
+  border-color: #b99a60;
+}
+
+.me-event-actions .me-delete-btn {
+  color: #a14e42;
+}
+
+.me-event-actions .me-delete-btn:hover {
+  background: #f9ece8;
+  border-color: #d8a49a;
+}
+
+.me-status {
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 10px;
+  white-space: nowrap;
+  margin-right: 5px;
+}
+
+.me-status.approved {
+  color: #287449;
+  background: #e6f1e7;
+}
+
+.me-status.pending {
+  color: #a47729;
+  background: #f6efdf;
+}
+
+.me-status.rejected {
+  color: #a14e42;
+  background: #f8e9e5;
+}
+
+.me-message,
+.me-empty {
+  padding: 65px 20px;
+  text-align: center;
+  background: #fffefa;
+  border: 1px solid #e9e5da;
+  color: #85877f;
+}
+
+.me-error {
+  color: #a14e42;
+}
+
+.me-empty svg {
+  color: #a9823f;
+}
+
+.me-empty h2 {
+  color: #12372c;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  margin: 15px 0 8px;
+}
+
+.me-empty p {
+  font-size: 13px;
+  margin-bottom: 22px;
+}
+
+@media (max-width: 850px) {
+  .me-summary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .me-event-card {
+    flex-wrap: wrap;
+  }
+
+  .me-event-actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 600px) {
+  .my-events-header {
+    padding: 22px 18px;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .my-events-header-actions {
+    width: 100%;
+  }
+
+  .my-events-header-actions button {
+    flex: 1;
+  }
+
+  .my-events-content {
+    padding: 22px 15px 40px;
+  }
+
+  .me-toolbar {
+    flex-direction: column;
+  }
+
+  .me-search {
+    max-width: none;
+  }
+
+  .me-toolbar select {
+    width: 100%;
+  }
+
+  .me-summary {
+    gap: 9px;
+  }
+
+  .me-summary div {
+    padding: 15px;
+  }
+
+  .me-event-card {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .me-event-poster {
+    width: 60px;
+    height: 60px;
+  }
+
+  .me-event-info h3 {
+    font-size: 15px;
+  }
+
+  .me-event-actions {
+    flex-wrap: wrap;
+  }
+}
