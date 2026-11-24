@@ -1,116 +1,186 @@
-# Event Manager – Full Stack MERN Application
+# EventEase – Full Stack Event Management System
 
-A full-stack Event Management and Booking Platform built using the MERN stack. The application connects event organizers, attendees and administrators through a centralized platform for event discovery, management, registration and booking.
+**EventEase** is a full-stack event management and booking platform built using the MERN stack. It provides a centralized platform for discovering events, managing event registrations, handling bookings, and overseeing event activities through separate user, organizer, and administrator dashboards.
+
+---
+
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [User Roles](#user-roles)
+- [Technology Stack](#technology-stack)
+- [Application Screenshots](#application-screenshots)
+- [Project Structure](#project-structure)
+- [Installation and Setup](#installation-and-setup)
+- [Environment Configuration](#environment-configuration)
+- [Security](#security)
+- [Author](#author)
+
+---
 
 ## Project Overview
 
-Event Manager is designed to simplify event organization and participation. Organizers can create and manage events, users can explore and book events, and administrators can oversee platform activities and manage approvals.
+EventEase simplifies the process of organizing and participating in events.
 
-## Technology Stack
+The platform provides three role-based experiences:
 
-**Frontend**
-- React.js
-- Vite
-- JavaScript
-- CSS
+- **Attendees** can discover events, book tickets, manage reservations, and access digital tickets.
+- **Organizers** can create and manage events, monitor registrations, and view attendee information.
+- **Administrators** can oversee platform activities, manage users, and review event and organizer approvals.
 
-**Backend**
-- Node.js
-- Express.js
-- REST API
+The application combines a responsive React frontend with a Node.js and Express backend, using MongoDB for data management.
 
-**Database**
-- MongoDB
-- Mongoose
+## Features
 
-**Authentication and Security**
-- JSON Web Tokens (JWT)
-- bcrypt password hashing
-- Role-based access control
+### Authentication and Registration
+- User registration and login.
+- Separate attendee and organizer registration.
+- JWT-based authentication.
+- Role-based access to application dashboards.
 
-**Development Tools**
-- Git and GitHub
-- VS Code
-- npm
+### Event Discovery
+- Browse available events.
+- View event categories and details.
+- Search and filter events.
+- View event dates, venues, descriptions, and ticket prices.
 
-## Key Features
+### Event Booking and Tickets
+- Book event tickets.
+- Select ticket quantities.
+- View booking history.
+- Track booking status.
+- Access digital tickets with QR codes.
+- Print and download ticket information.
 
-### 1. Authentication and User Management
-- User registration and login
-- Secure password hashing
-- JWT-based authentication
-- Role-based access for different users
+### Attendee Dashboard
+- Personalized dashboard.
+- View upcoming bookings.
+- Manage reservations.
+- Access digital tickets.
+- Save events.
+- Manage profile information.
 
-### 2. Event Management
-- Create and manage events
-- Upload event posters
-- View event details
-- Edit and manage existing events
+### Organizer Dashboard
+- Create and manage events.
+- View event approval status.
+- Monitor event statistics.
+- Manage registered attendees.
+- Search and filter attendee records.
+- Export attendee information as CSV.
 
-### 3. Event Booking
-- Browse available events
-- Register for events
-- Manage bookings
-- View booking and ticket information
-- Cancel bookings
+### Administrator Dashboard
+- View platform statistics.
+- Manage users.
+- Review organizer applications.
+- Approve or reject event submissions.
+- Monitor platform activities.
 
-### 4. Organizer Dashboard
-- Organizer registration and approval workflow
-- Event management dashboard
-- Manage attendees
-- View event analytics
-
-### 5. Administrator Dashboard
-- Manage platform activities
-- Review organizer applications
-- Approve or reject events
-- Manage platform users
-
-### 6. User Dashboard
-- View bookings
-- Access tickets
-- Save events
-- Manage profile
-- View notifications
+---
 
 ## User Roles
 
-| Role | Responsibilities |
+| Role | Main Responsibilities |
 |---|---|
-| Administrator | Platform management and approvals |
-| Organizer | Create and manage events and attendees |
-| User | Discover events and manage bookings |
+| Attendee | Discover events, book tickets, manage bookings and access tickets |
+| Organizer | Create events, manage submissions and monitor attendees |
+| Administrator | Manage users, organizers, events and approvals |
+
+---
+
+## Technology Stack
+
+| Component | Technologies |
+|---|---|
+| Frontend | React.js, Vite, JavaScript, CSS |
+| Backend | Node.js, Express.js |
+| Database | MongoDB, Mongoose |
+| Authentication | JWT, bcrypt |
+| API | REST API |
+| Version Control | Git, GitHub |
+
+---
+
+## Application Screenshots
+
+The following screenshots demonstrate the application's interface and its role-based functionality.
+
+### 1. Authentication and Registration
+
+**Login Page**
+
+![Login Page](screenshots/login.png)
+
+**Attendee Registration**
+
+![Attendee Registration](screenshots/register.png)
+
+**Organizer Registration**
+
+![Organizer Registration](screenshots/organizer-registration.png)
+
+### 2. Event Discovery and Booking
+
+**EventEase Home Page**
+
+![Home Page](screenshots/home.png)
+
+**Explore Events**
+
+![Explore Events](screenshots/events.png)
+
+**Event Details and Ticket Booking**
+
+![Event Details](screenshots/event-details.png)
+
+### 3. Attendee Dashboard
+
+**User Dashboard**
+
+![User Dashboard](screenshots/user-dashboard.png)
+
+**My Bookings**
+
+![My Bookings](screenshots/bookings.png)
+
+### 4. Organizer Dashboard
+
+**Organizer Overview**
+
+![Organizer Dashboard](screenshots/organizer-dashboard.png)
+
+**My Events**
+
+![Organizer Events](screenshots/organizer-events.png)
+
+### 5. Administrator Dashboard
+
+**Administration Panel**
+
+![Admin Dashboard](screenshots/admin-dashboard.png)
+
+---
 
 ## Project Structure
 
 ```text
-event-manager/
+eventmnager/
 │
 ├── backend/
-│   ├── src/
-│   │   ├── config/
-│   │   ├── controllers/
-│   │   ├── middlewares/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   ├── utils/
-│   │   └── validators/
+│   ├── controllers/
+│   ├── models/
+│   ├── routes/
+│   ├── middlewares/
+│   ├── config/
 │   ├── uploads/
 │   ├── server.js
-│   ├── package.json
-│   └── .env.example
+│   └── package.json
 │
 ├── frontend/
 │   ├── public/
 │   ├── src/
-│   │   ├── assets/
-│   │   ├── context/
-│   │   ├── pages/
-│   │   └── services/
-│   ├── App.jsx
-│   ├── main.jsx
-│   ├── package.json
-│   └── .env.example
+│   ├── index.html
+│   └── package.json
 │
 └── README.md
 ```
@@ -118,38 +188,49 @@ event-manager/
 ## Installation and Setup
 
 ### Prerequisites
-- Node.js and npm
-- MongoDB local installation or MongoDB Atlas
+
+Install the following before running the application:
+
+- Node.js
+- npm
+- MongoDB or MongoDB Atlas
 - Git
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/phenomenalforeveryone/eventmnager.git
+```
+
+```bash
 cd eventmnager
 ```
 
-### 2. Setup the backend
+### 2. Install Backend Dependencies
 
 ```bash
 cd backend
 npm install
 ```
 
-Configure the backend environment variables using the provided `.env.example` file. Add your own MongoDB connection string and authentication configuration.
+Configure the backend environment variables in a `.env` file.
 
-Start the backend using the appropriate script defined in `backend/package.json`.
+Start the backend using the development script configured in `backend/package.json`:
 
-### 3. Setup the frontend
+```bash
+npm run dev
+```
 
-Open another terminal:
+### 3. Install Frontend Dependencies
+
+Open a second terminal:
 
 ```bash
 cd frontend
 npm install
 ```
 
-Configure the frontend `.env` file:
+Configure the frontend environment variable:
 
 ```env
 VITE_API_URL=http://localhost:5000/api
@@ -161,40 +242,62 @@ Start the frontend:
 npm run dev
 ```
 
-### 4. Access the application
+### 4. Open the Application
 
-Frontend: http://localhost:5173
+Open the local URL displayed by Vite in your browser. The default frontend address is:
 
-Backend: http://localhost:5000
+```text
+http://localhost:5173
+```
 
-## Security
-
-- Password hashing
-- JWT-based authentication
-- Role-based authorization
-- Environment variable configuration
-- Protected application routes
-
-## Future Improvements
-
-- Online payment gateway integration
-- Enhanced event recommendation system
-- Advanced analytics and reporting
-- Additional notification features
-- Cloud deployment and scalability improvements
-
-## Project Information
-
-**Project Name:** Event Manager
-
-**Category:** Full Stack Web Development
-
-**Architecture:** MERN Stack
-
-**Repository:** https://github.com/phenomenalforeveryone/eventmnager
-
-**Developed by:** Urvi Singh
+Keep both backend and frontend terminals running while using the application.
 
 ---
 
-*Event Manager – Simplifying Event Discovery, Organization and Booking.*
+## Environment Configuration
+
+The application uses environment variables for configuration.
+
+Configure the required variables in the backend `.env` file, including:
+
+- MongoDB connection string.
+- JWT secret.
+- Backend port.
+- Frontend client URL, if required by the backend.
+
+The frontend uses:
+
+- `VITE_API_URL` – Backend API base URL.
+
+**Security note:** Actual credentials and secret values must never be committed to GitHub. Use `.env.example` files to document required variable names.
+
+---
+
+## Security
+
+The application uses:
+
+- Password hashing with bcrypt.
+- JWT-based authentication.
+- Role-based authorization.
+- Protected application routes.
+- Environment variables for sensitive configuration.
+
+---
+
+## Author
+
+**Urvi Singh**
+
+B.Tech – Computer Science and Engineering
+
+**Project Name:** EventEase  
+**Project Category:** Full Stack Web Development  
+**Technology:** MERN Stack
+
+**GitHub Repository:**  
+https://github.com/phenomenalforeveryone/eventmnager
+
+---
+
+*EventEase – Discover. Experience. Remember.*
